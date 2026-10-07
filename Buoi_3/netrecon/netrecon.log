@@ -1,0 +1,74 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.12.23.241:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 361-335-840
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 14:12:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 14:12:34] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 14:12:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:[2026-10-07 14:12:53] Port 80 is open on 127.0.0.1
+INFO:root:[2026-10-07 14:12:53] Port 443 is open on 127.0.0.1
+INFO:root:[2026-10-07 14:12:54] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 14:13:02] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 14:12 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00076s latency).
+
+PORT    STATE  SERVICE   VERSION
+22/tcp  closed ssh
+80/tcp  open   http      Apache httpd 2.4.54 ((Win64) OpenSSL/1.1.1p PHP/7.4.33)
+443/tcp open   ssl/https Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.33
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 7.91 seconds
+
+INFO:root:[2026-10-07 14:13:08] Mapping network...
+INFO:root:[2026-10-07 14:13:08] 
+Interface: 10.12.23.241 --- 0x7
+  Internet Address      Physical Address      Type
+  10.12.0.254           00-aa-6e-37-de-67     dynamic   
+  10.12.55.48           f8-3d-c6-87-3a-78     dynamic   
+  10.12.255.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  224.0.0.253           01-00-5e-00-00-fd     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.52.1 --- 0x15
+  Internet Address      Physical Address      Type
+  192.168.52.254        00-50-56-e8-3c-1d     dynamic   
+  192.168.52.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 26.5.60.190 --- 0x16
+  Internet Address      Physical Address      Type
+  26.0.0.1              02-00-00-00-51-00     dynamic   
+  26.255.255.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+
+Interface: 192.168.25.1 --- 0x1b
+  Internet Address      Physical Address      Type
+  192.168.25.254        00-50-56-e5-6f-8d     dynamic   
+  192.168.25.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 14:13:12] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'D:\\TH_LTANTT\\Buoi_3\\netrecon\\test_mail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 361-335-840

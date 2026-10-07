@@ -1,5 +1,7 @@
 # Khong commit chung chi (chua private key) va file bi mat len GitHub
 secure-chat/certs/
 .env
+env.txt
+test_mail.py
 __pycache__/
 *.pyc
