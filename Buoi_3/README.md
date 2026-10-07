@@ -130,6 +130,10 @@ Mở <http://localhost:5000>, nhập mục tiêu, chọn chế độ rồi bấm
 |---|---|
 | ![Form](screenshots/01_netrecon_web_form.png) | ![Result](screenshots/02_netrecon_web_result.png) |
 
+Sau khi bấm **Scan**, kết quả còn được gửi về email đã nhập (cấu hình trong `.env`). Email nhận được trong hộp thư:
+
+![Email kết quả quét](screenshots/05_email_received.png)
+
 ---
 
 ## Tóm tắt kiểm thử
@@ -143,6 +147,7 @@ Mở <http://localhost:5000>, nhập mục tiêu, chọn chế độ rồi bấm
 | Quét cổng bất đồng bộ (phát hiện cổng đang mở) | ✅ phát hiện đúng cổng mở |
 | `vuln_checker`, `filter_utils` (whitelist/blacklist) | ✅ đúng logic |
 | Web app: route `/` và `/scan` render `result.html` | ✅ HTTP 200, hiển thị kết quả |
+| Gửi email kết quả qua Gmail (SMTP SSL) | ✅ nhận được email "Kết quả quét từ NetRecon" |
 
 > `service_detector` (nmap) và `network_mapper` (arp) phụ thuộc công cụ hệ thống nên chạy trực tiếp trên Windows (máy đã cài sẵn Nmap).
 
