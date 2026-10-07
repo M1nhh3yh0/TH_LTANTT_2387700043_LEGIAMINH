@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+gitsecure.log
+certs/
+*.pem
+.env
