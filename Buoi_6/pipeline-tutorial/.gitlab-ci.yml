@@ -1,0 +1,30 @@
+# =====================================================================
+# BÀI 6 - DevSecOps : Pipeline CI/CD PHỨC TẠP (mục 6.2.2)
+# Sinh vien: Le Gia Minh - MSSV 2387700043 - Lop 23DATA1
+# ---------------------------------------------------------------------
+# Build trang tinh Docusaurus va trien khai len GitLab Pages.
+#   - Stage build : build-job -> npm install + npm run build -> artifacts build/
+#   - Stage deploy: pages     -> chuyen build/ sang public/ cho GitLab Pages
+# =====================================================================
+
+stages:            # Danh sach cac stage va thu tu thuc thi
+  - build
+  - deploy
+
+build-job:
+  stage: build     # Job nay thuoc stage `build`
+  image: node      # Dung Docker image Node.js (da co san npm)
+  script:
+    - npm install  # Cai dat Docusaurus vao container node
+    - npm run build # Build trang web tinh (xuat ra thu muc build/)
+  artifacts:
+    paths:
+      - "build/"   # Luu thu muc build/ lam artifact cho stage sau dung lai
+
+pages:             # Khi dung GitLab Pages, job BAT BUOC co ten la `pages`
+  stage: deploy    # Job nay thuoc stage `deploy`
+  script:
+    - mv build/ public/  # GitLab Pages tim trang web trong thu muc public/
+  artifacts:
+    paths:
+      - "public/"  # public/ se duoc GitLab Pages phuc vu cong khai

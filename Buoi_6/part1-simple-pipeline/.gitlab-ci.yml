@@ -1,0 +1,31 @@
+# =====================================================================
+# BÀI 6 - DevSecOps : Pipeline CI/CD ĐƠN GIẢN (mục 6.2.1)
+# Sinh vien: Le Gia Minh - MSSV 2387700043 - Lop 23DATA1
+# ---------------------------------------------------------------------
+# Pipeline minh hoa 3 stage: build -> test -> deploy
+# Gom 4 job: build-job, test-job1, test-job2, deploy-prod
+# =====================================================================
+
+build-job:                       # Job thuoc stage build
+  stage: build
+  script:
+    - echo "Hello, $GITLAB_USER_LOGIN!"
+
+test-job1:                       # Job kiem thu thu nhat (stage test)
+  stage: test
+  script:
+    - echo "This job tests something"
+
+test-job2:                       # Job kiem thu thu hai, chay lau hon (stage test)
+  stage: test
+  script:
+    - echo "This job tests something, but takes more time than test-job1."
+    - echo "After the echo commands complete, it runs the sleep command for 20 seconds"
+    - echo "which simulates a test that runs 20 seconds longer than test-job1"
+    - sleep 20
+
+deploy-prod:                     # Job trien khai (stage deploy)
+  stage: deploy
+  script:
+    - echo "This job deploys something from the $CI_COMMIT_BRANCH branch."
+  environment: production

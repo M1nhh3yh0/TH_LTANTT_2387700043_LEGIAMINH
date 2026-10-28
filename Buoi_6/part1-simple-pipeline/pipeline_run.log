@@ -1,0 +1,49 @@
+============================================================
+   PIPELINE #1 (DON GIAN) - stage: build -> test -> deploy
+============================================================
+Running with gitlab-runner 17.4.0 (local-sim)
+  on local-runner  LEGIAMINH
+Preparing the "docker" executor
+Preparing environment
+Executing "step_script" stage of the job script
+$ job: build-job  (stage: build)
+$ echo "Hello, $GITLAB_USER_LOGIN!"
+Hello, legiaminh!
+Job succeeded
+------------------------------------------------------------
+Running with gitlab-runner 17.4.0 (local-sim)
+  on local-runner  LEGIAMINH
+Preparing the "docker" executor
+Preparing environment
+Executing "step_script" stage of the job script
+$ job: test-job1  (stage: test)
+$ echo "This job tests something"
+This job tests something
+Job succeeded
+------------------------------------------------------------
+Running with gitlab-runner 17.4.0 (local-sim)
+  on local-runner  LEGIAMINH
+Preparing the "docker" executor
+Preparing environment
+Executing "step_script" stage of the job script
+$ job: test-job2  (stage: test)
+$ echo "This job tests something, but takes more time than test-job1."
+This job tests something, but takes more time than test-job1.
+$ echo "After the echo commands complete, it runs the sleep command for 20 seconds"
+After the echo commands complete, it runs the sleep command for 20 seconds
+$ echo "which simulates a test that runs 20 seconds longer than test-job1"
+which simulates a test that runs 20 seconds longer than test-job1
+$ sleep 2   # rut ngan de demo (goc: sleep 20)
+Job succeeded
+------------------------------------------------------------
+Running with gitlab-runner 17.4.0 (local-sim)
+  on local-runner  LEGIAMINH
+Preparing the "docker" executor
+Preparing environment
+Executing "step_script" stage of the job script
+$ job: deploy-prod  (stage: deploy)
+$ echo "This job deploys something from the $CI_COMMIT_BRANCH branch."
+This job deploys something from the main branch.
+Job succeeded
+------------------------------------------------------------
+>>> Pipeline PASSED: 4/4 job thanh cong (build 1, test 2, deploy 1)
